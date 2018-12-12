@@ -1,0 +1,25 @@
+{
+  "name": "ctree-cli",
+  "version": "1.0.9",
+  "description": "The solution to list the contents of directories in a tree-like format",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ggwork/ctree-cli.git"
+  },
+  "bin": {
+    "ctree-cli": "./bin/createTree.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["tree", "directory", "yargs", "files", "directories", "tree-like"],
+  "author": "stephen guo <1159468968@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^12.0.5"
+  }
+}

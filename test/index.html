@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/statistical.css" />
+</head>
+
+<body>
+  <div class="statistical-container">
+    <div class="s-item s-item1">
+      <div class="s-i-title">统计分析</div>
+      <div class="s-i-chart">
+        <div class="s-i-c-wrap">
+          <div id="s-i-c1" class="s-i-c"></div>
+          <div class="s-i-t">
+            <ul>
+              <li>
+                <div class="s-i-t1">计划：</div>
+                <div class="s-i-wrap">
+                  <div class="s-i-color"></div>
+                </div>
+              </li>
+              <li>
+                <div class="s-i-t1">实际：</div>
+                <div class="s-i-t2">30%</div>
+              </li>
+              <li>
+                <div class="s-i-t1">状态：</div>
+                <div class="s-i-t2 green">正常</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="s-i-c-wrap">
+          <div id="s-i-c2" class="s-i-c"></div>
+          <div class="s-i-t">
+            <ul>
+              <li>
+                <div class="s-i-t1">概算：</div>
+                <div class="s-i-t2">1.6亿</div>
+              </li>
+              <li>
+                <div class="s-i-t1">实际：</div>
+                <div class="s-i-t2">0.26亿</div>
+              </li>
+              <li>
+                <div class="s-i-t1">&nbsp;</div>
+                <div class="s-i-t2">&nbsp;</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="s-i-c-wrap">
+          <div id="s-i-c3" class="s-i-c"></div>
+          <div class="s-i-t">
+            <ul>
+              <li>
+                <div class="s-i-t1">质量问题：</div>
+                <div class="s-i-t2">6个</div>
+              </li>
+              <li>
+                <div class="s-i-t1">整改：</div>
+                <div class="s-i-t2">5个</div>
+              </li>
+              <li>
+                <div class="s-i-t1">验证：</div>
+                <div class="s-i-t2">3个</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s-item s-item2">
+      <div class="s-i-title">费用分析</div>
+      <div class="s-i-chart" id="s-item2-chart">
+
+      </div>
+    </div>
+
+    <div class="s-item s-item3">
+      <div class="s-i-title">进度分析</div>
+      <div class="s-i-chart">
+        <div id="progressChart">
+          <ul>
+            <li class="p-c-li">
+              <div class="p-c-li-text">项目前期准备</div>
+              <div class="p-c-li-wrap">
+                <div class="p-c-li-color">
+                </div>
+              </div>
+            </li>
+            <li class="p-c-li">
+              <div class="p-c-li-text">施工图设计</div>
+              <div class="p-c-li-wrap">
+                <div class="p-c-li-color">
+                </div>
+              </div>
+            </li>
+            <li class="p-c-li">
+              <div class="p-c-li-text">施工监理招标</div>
+              <div class="p-c-li-wrap">
+                <div class="p-c-li-color">
+                </div>
+              </div>
+            </li>
+            <li class="p-c-li">
+              <div class="p-c-li-text">施工进场准备</div>
+              <div class="p-c-li-wrap">
+                <div class="p-c-li-color">
+                </div>
+              </div>
+            </li>
+            <li class="p-c-li">
+              <div class="p-c-li-text">项目进场施工</div>
+              <div class="p-c-li-wrap">
+                <div class="p-c-li-color">
+                </div>
+              </div>
+            </li>
+            <li class="p-c-li">
+              <div class="p-c-li-text">项目验收</div>
+              <div class="p-c-li-wrap">
+                <div class="p-c-li-color">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="s-item s-item4">
+      <div class="s-i-title">工程进展对比</div>
+      <div class="s-i-chart s-i-imgW">
+        <img src="./img/statistical-1.png" alt="" srcset="">
+        <img src="./img/statistical-2.png" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+  <script src="./lib/jquery-1.11.1.js"></script>
+  <script src="./lib/echarts.min.js"></script>
+  <script src="./js/statictical.js"></script>
+</body>
+
+</html>
