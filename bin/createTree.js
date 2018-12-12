@@ -103,19 +103,22 @@ function getType(curPath) {
 // 获取fs.readDir的结果。如果有-m则包含node_modules 否则不包含
 function getFsReadDir(curPath) {
   let allArr = fs.readdirSync(curPath);
+  // console.log('mFlag:', !!!mFlag)
   if (!!!mFlag) {
     for (let i = 0; i < allArr.length; i++) {
       if (allArr[i] == excludeDir) {
-        allArr[i] == ''
+        allArr[i] = ''
       }
     }
   }
+  // console.log("allArr:", allArr)
   return allArr
 }
 
 // 获取经过处理后的目录和文件对象
 function getAll(curPath) {
   let allArr = clearArrayNull(getFsReadDir(curPath));
+  // console.log('allArr2:', allArr)
   let dirObj = []
   allArr.forEach(function (item, index, arr) {
     let childPath = path.join(curPath, item)
