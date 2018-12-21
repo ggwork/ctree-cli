@@ -24,7 +24,7 @@ like this：
 ## Installation
 
 ```shell
-  $ npm install tree-cli
+  $ npm install ctree-cli
 ```
 
 ## Options
