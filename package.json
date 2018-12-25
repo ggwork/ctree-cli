@@ -1,6 +1,6 @@
 {
   "name": "ctree-cli",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "The solution to list the contents of directories in a tree-like format",
   "main": "index.js",
   "directories": {

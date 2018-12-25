@@ -249,7 +249,7 @@ function getResult() {
 }
 
 // 目录每一级前的空格
-let space = '  '
+let space = '  |'
 
 // 结果字符串
 let resultStr = `
@@ -275,7 +275,7 @@ function getChildrenResultStr(result, nestNum) {
   let nestSpaceStr = `${space}`.repeat(nestNum)
   result.forEach(function (item, index, arr) {
     tempResultStr += `
-${nestSpaceStr}|-${item.name}`
+${nestSpaceStr}-${item.name}`
     if (item.type == 'dir') {
       tempResultStr += getChildrenResultStr(item.children, nestNum)
     }
