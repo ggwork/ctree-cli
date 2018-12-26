@@ -24,7 +24,7 @@ like this：
 ## Installation
 
 ```shell
-  $ npm install ctree-cli
+  $ npm install ctree-cli -g
 ```
 
 ## Options
@@ -63,16 +63,16 @@ result:
 |-test
   |-.babelrc
   |-css
-    |-jquery-ui.css
-    |-main.css
+  |  |-jquery-ui.css
+  |  |-main.css
   |-hide.txt
   |-img
-      |-a.png
-      |-head
-        |-b.png
+  |  |-a.png
+  |  |-head
+  |  |  |-b.png
   |-index.html
   |-js
-          |-index.js
+  |  |-index.js
   |-show.txt
   |-说明.txt
 ```
