@@ -38,6 +38,7 @@ like this：
 - -s Print the size of each file along with the name.
 - -t Sort the output by last modification time instead of alphabetically.
 - -m print "node_modules" dirctory.be default it is not print
+- -I pattern    Do not list dir that match the given pattern
 
 中文：
 
@@ -48,6 +49,7 @@ like this：
 - -s 列出文件或目录大小
 - -t 用文件和目录的更改时间排序
 - -m 显示 node_modules 目录树，默认不显示。显示 node_modules 会消耗非常多的时间
+- -I 需要忽略的文件夹，参数为正则表达式
 
 ## example
 

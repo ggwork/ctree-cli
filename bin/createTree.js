@@ -11,6 +11,8 @@ const argv = require('yargs')
   .describe('f', '在每个文件或目录之前，显示完整的相对路径名称')
   .describe('s', '列出文件或目录大小')
   .describe('t', '用文件和目录的更改时间排序')
+  .describe('m', '是否显示node_modules文件夹,默认不显示')
+  .describe('I', '需要忽略的文件夹，参数为正则表达式')
   .help()
   .argv
 
@@ -45,7 +47,18 @@ if (argv.t) {
 if (argv.m) {
   mFlag = true
 }
-
+// 需要隐藏的文件和文件夹名称
+if (argv.I) {
+  //  /abc/i
+  let oriReg = argv.I
+  if (/^\/.*\/[gimsuy]/.test(oriReg)) {
+    let lastIndexOf = oriReg.lastIndexOf('/')
+    let regStr = mFlag ? oriReg.slice(1, lastIndexOf) : oriReg.slice(1, lastIndexOf) + '|node_modules'
+    excludeDir = new RegExp(regStr, oriReg.slice(lastIndexOf + 1))
+  } else {
+    console.error('正则表达式不符合规范')
+  }
+}
 
 
 
@@ -104,14 +117,11 @@ function getType(curPath) {
 function getFsReadDir(curPath) {
   let allArr = fs.readdirSync(curPath);
   // console.log('mFlag:', !!!mFlag)
-  if (!!!mFlag) {
-    for (let i = 0; i < allArr.length; i++) {
-      if (allArr[i] == excludeDir) {
-        allArr[i] = ''
-      }
+  for (let i = 0; i < allArr.length; i++) {
+    if (excludeDir.test(allArr[i])) {
+      allArr[i] = ''
     }
   }
-  // console.log("allArr:", allArr)
   return allArr
 }
 
