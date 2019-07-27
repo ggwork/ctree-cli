@@ -2,6 +2,7 @@
 
 const fs = require('fs')
 const path = require('path')
+const filesize = require('filesize')
 
 const argv = require('yargs')
   .version()
@@ -21,7 +22,7 @@ let currentDir = '.'
 // 当前目录名称
 let currentDirName = path.basename(process.cwd())
 // 排除文件夹,默认把node_modules排除在遍历之外
-let excludeDir = 'node_modules'
+let excludeDir = /node_modules/
 // 设置各个标识
 let aFlag, dFlag, DFlag, fFlag, sFlag, tFlag, mFlag
 
@@ -51,7 +52,7 @@ if (argv.m) {
 if (argv.I) {
   //  /abc/i
   let oriReg = argv.I
-  if (/^\/.*\/[gimsuy]/.test(oriReg)) {
+  if (/^\/.*\/[gimsuy]*/.test(oriReg)) {
     let lastIndexOf = oriReg.lastIndexOf('/')
     let regStr = mFlag ? oriReg.slice(1, lastIndexOf) : oriReg.slice(1, lastIndexOf) + '|node_modules'
     excludeDir = new RegExp(regStr, oriReg.slice(lastIndexOf + 1))
@@ -207,7 +208,8 @@ function getRelativeFile(result) {
 // 显示文件的大小
 function getSizeFile(result) {
   result.forEach(function (item, index, arr) {
-    item.name = `[${(''+item.size).padStart(8)}]` + item.name
+//    item.name = `[${(''+item.size).padStart(8)}]` + item.name
+    item.name = `[${filesize(item.size).padStart(8)}]` + item.name
     if (item.type == "dir") {
       getSizeFile(item.children)
     }
