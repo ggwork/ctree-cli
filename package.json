@@ -16,10 +16,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["tree", "directory", "yargs", "files", "directories", "tree-like"],
+  "keywords": [
+    "tree",
+    "directory",
+    "yargs",
+    "files",
+    "directories",
+    "tree-like"
+  ],
   "author": "stephen guo <1159468968@qq.com>",
   "license": "MIT",
   "dependencies": {
     "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "filesize": "^4.1.2"
   }
 }
